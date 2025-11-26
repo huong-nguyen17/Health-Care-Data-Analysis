@@ -41,7 +41,22 @@ select
 	DATEDIFF(year, MIN(BirthDate), GETDATE()) AS oldest_patient_age_years,
     DATEDIFF(year, MAX(BirthDate), GETDATE()) AS youngest_patient_age_years
 from [gold].[dim_patient]
+	
+-- Age distribution
+SELECT
+    FLOOR(DATEDIFF(YEAR, BirthDate, GETDATE()) / 10.0) * 10 AS AgeGroup,
+    COUNT(*) AS PatientCount
+FROM gold.dim_patient
+WHERE BirthDate IS NOT NULL
+GROUP BY FLOOR(DATEDIFF(YEAR, BirthDate, GETDATE()) / 10.0) * 10
+ORDER BY PatientCount desc;
 
+-- Nulls in important columns
+SELECT
+    SUM(CASE WHEN BirthDate IS NULL THEN 1 ELSE 0 END) AS MissingBirthDate,
+    SUM(CASE WHEN Gender IS NULL THEN 1 ELSE 0 END)     AS MissingGender,
+    SUM(CASE WHEN City IS NULL THEN 1 ELSE 0 END)       AS MissingCity
+FROM gold.dim_patient;
 --patient background 
 select distinct language
 from [gold].[dim_patient]
