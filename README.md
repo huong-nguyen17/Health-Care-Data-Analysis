@@ -1,5 +1,6 @@
 # Health-Care-EDA #
 Tools Used: MS SQL Server
+This project used data directly from HealthCare Warehouse: https://github.com/huong-nguyen17/Health-Care-Warehouse-Project
 Tables Used: gold.dim_patient, gold.dim_practitioner, gold.fact_claim, gold.fact_observation_encounter
 1. Objective
   The objective of this project was to perform an in‑depth exploratory data analysis (EDA) across patient, practitioner, claim, and observation data to understand data quality, population characteristics, cost distributions, and early utilization signals. This foundational analysis prepares the analytical environment for subsequent cost‑driver analysis, practitioner performance assessment, population health insights, and predictive modeling used in the final executive dashboard.
