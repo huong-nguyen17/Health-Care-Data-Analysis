@@ -181,8 +181,9 @@ QALY increases with cost → high‑cost care yields meaningful health gains
 ### 📈 Power BI Dashboard
 
 <img width="1115" height="627" alt="image" src="https://github.com/user-attachments/assets/7cc351d6-fab2-4053-9eb0-76c4258f7877" />
-
-
+---
+### 📊 Report
+Check: https://github.com/huong-nguyen17/HealthCare-Project/tree/main/docs
 ---
 ### 🚀 Future Enhancements
 Predictive modeling for high‑cost patient forecasting
